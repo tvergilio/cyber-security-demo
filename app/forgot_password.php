@@ -1,6 +1,8 @@
 <?php
 require 'db.php';
 
+session_start(); // Start the session
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $security_answer = $_POST['security_answer'];
@@ -12,20 +14,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($user) {
         $_SESSION['reset_user'] = $username;
         header('Location: reset_password.php');
+        exit;
     } else {
-        echo "Incorrect security answer!";
+        $error_message = "Incorrect security answer!";
     }
 }
 ?>
-<h2>Forgot Password</h2>
-<form method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required>
-    <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="forgot-container">
+    <h2 class="forgot-title">Forgot Password</h2>
 
-    <label for="security_answer">Answer to your security question:</label>
-    <input type="text" name="security_answer" id="security_answer" required>
-    <br>
+    <!-- Display error message if the answer is incorrect -->
+    <?php if (isset($error_message)): ?>
+        <p class="error-message"><?php echo htmlspecialchars($error_message); ?></p>
+    <?php endif; ?>
 
-    <input type="submit" value="Submit">
-</form>
+    <form method="POST" class="forgot-form">
+        <label for="username" class="forgot-label">Username</label>
+        <input type="text" name="username" id="username" class="forgot-input" required>
+
+        <label for="security_answer" class="forgot-label">Answer to your security question</label>
+        <input type="text" name="security_answer" id="security_answer" class="forgot-input" required>
+
+        <input type="submit" value="Submit" class="forgot-button">
+    </form>
+</div>
+</body>
+</html>

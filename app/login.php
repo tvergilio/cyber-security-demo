@@ -1,13 +1,14 @@
 <?php
 session_start(); // Start the session
 
-require 'db.php'; // Include database connection
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+require 'db.php';
 
+$error_message = '';  // Default to no error
+
+// Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
 
     // Query the database to find the user
     $stmt = $pdo->prepare('SELECT * FROM users WHERE username = ?');
@@ -16,18 +17,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Check if the user exists and the password matches
     if ($user && $password === $user['password']) {
-        // Set the session variable for the logged-in user
+        // Set session variable to track the logged-in user
         $_SESSION['username'] = $user['username'];
 
-        // Redirect to index.php after successful login
+        // Redirect to the homepage
         header('Location: index.php');
         exit;
     } else {
-        echo "<p style='color:red;'>Invalid username or password. Please try again.</p>";
+        // Invalid login, set the error message
+        $error_message = "Invalid username or password. Please try again.";
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="login-container">
     <!-- HSBC Logo -->
     <img src="assets/hsbc.png" alt="HSBC Logo" class="bank-logo">
+
+    <!-- Display the error message, if any -->
+    <?php if (!empty($error_message)): ?>
+        <p class="error-message"><?php echo htmlspecialchars($error_message); ?></p>
+    <?php endif; ?>
 
     <form method="POST" action="login.php" class="login-form">
         <h2 class="login-title">Log into Your Account</h2>
@@ -55,10 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </p>
 
         <input type="submit" value="Login" class="login-button">
-
-        <p class="logout-link">
-            <a href="logout.php">Logout</a>
-        </p>
     </form>
 </div>
 </body>

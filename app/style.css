@@ -87,6 +87,281 @@ body {
     height: auto;
 }
 
+/* Logged-in container styling */
+.loggedin-container {
+    width: 360px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;  /* Centers the container on the page */
+}
+
+/* Welcome message styling */
+.welcome-message {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Logout button styling */
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d00303;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #b20202;
+}
+
+/* Forgot password container styling */
+.forgot-container {
+    width: 360px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;
+}
+
+/* Title styling for forgot password */
+.forgot-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input labels for forgot password */
+.forgot-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields for forgot password */
+.forgot-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Reset password container styling */
+.reset-container {
+    width: 360px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;
+}
+
+/* Title styling for reset password */
+.reset-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input labels for reset password */
+.reset-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields for reset password */
+.reset-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit button for reset password */
+.reset-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d00303;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background-color: #b20202;
+}
+
+/* Success message styling */
+.success-message {
+    color: green;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 400px) {
+    .reset-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .reset-input, .reset-button {
+        font-size: 14px;
+    }
+
+    .reset-title {
+        font-size: 20px;
+    }
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Other styles for the login form */
+.login-container {
+    width: 360px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;
+}
+
+.login-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d00303;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #b20202;
+}
+
+.forgot-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-link a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 400px) {
+    .login-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-input, .login-button {
+        font-size: 14px;
+    }
+
+    .login-title {
+        font-size: 20px;
+    }
+}
+
+/* Submit button for forgot password */
+.forgot-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d00303;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.forgot-button:hover {
+    background-color: #b20202;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 400px) {
+    .forgot-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .forgot-input, .forgot-button {
+        font-size: 14px;
+    }
+
+    .forgot-title {
+        font-size: 20px;
+    }
+}
+
+
 /* Make sure the inputs and buttons look good on mobile */
 @media (max-width: 400px) {
     .login-container {

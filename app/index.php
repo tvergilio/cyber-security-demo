@@ -7,11 +7,24 @@ error_reporting(E_ALL);
 
 // Check if the user is logged in
 if (isset($_SESSION['username'])) {
-    // If the user is logged in, display a welcome message and the logout link
-    echo "<div style='text-align: center; margin-top: 20px;'>
-            <h2>Welcome, " . htmlspecialchars($_SESSION['username']) . "!</h2>
-            <p><a href='logout.php' class='logout-link'>Logout</a></p>
-          </div>";
+    // If the user is logged in, display a styled welcome message and the logout link
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome - Bank</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="loggedin-container">
+        <h2 class="welcome-message">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
+        <p><a href="logout.php" class="logout-button">Logout</a></p>
+    </div>
+    </body>
+    </html>
+    <?php
 } else {
     // If the user is not logged in, display the login form
     ?>
