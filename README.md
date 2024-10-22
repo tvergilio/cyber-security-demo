@@ -26,11 +26,20 @@ The video demonstrates a scenario where a user named Ed unknowingly reveals sens
 ## Features
 
 - **Login and Logout functionality** with insecure password storage (plain text).
-  <img src="app/assets/bank-login.png" alt="Login Portal" width="25%">
+    <p style="text-align: center;">
+      <img src="app/assets/bank-login.png" alt="Login Portal" width="40%">
+    </p>  
+  
 - **Forgot Password** flow with weak security question handling.
-  <img src="app/assets/security-question.png" alt="Login Portal" width="25%">
+  <p style="text-align: center;">
+    <img src="app/assets/security-question.png" alt="Login Portal" width="40%">
+  </p>  
+
 - **Change Password** functionality that demonstrates what an attacker could do.
-  <img src="app/assets/reset-password.png" alt="Login Portal" width="25%">
+  <p style="text-align: center;">
+    <img src="app/assets/reset-password.png" alt="Login Portal" width="40%">
+  </p>
+  
 - Vulnerable **session management** and **authentication mechanisms**.
 
 ## Requirements
