@@ -7,7 +7,5 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 INSERT INTO users (username, password, security_question, security_answer) VALUES
-                                                                               ('josh', 'scruff123', 'What is your favorite color?', 'black'),
-                                                                               ('lucas', 'rollo180913', 'What is your pet’s name?', 'rollo'),
-                                                                               ('mike', 'mike123!', 'What is your favorite food?', 'pizza');
+                                                                               ('Edward_Rowntree', 'Scruff123', 'What is your favorite food?', 'Pizza');
 

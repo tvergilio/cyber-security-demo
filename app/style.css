@@ -321,8 +321,71 @@ body {
         font-size: 20px;
     }
 }
+/* Container styling */
+.forgot-container {
+    width: 360px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;
+}
 
-/* Submit button for forgot password */
+/* Logo styling */
+.bank-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Title styling */
+.forgot-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hint message styling */
+.hint-message {
+    font-size: 14px;
+    color: #555; /* Subtle hint color */
+    text-align: left;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Label styling */
+.forgot-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields styling */
+.forgot-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit button styling */
 .forgot-button {
     width: 100%;
     padding: 10px;
@@ -336,6 +399,22 @@ body {
 
 .forgot-button:hover {
     background-color: #b20202;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 400px) {
+    .forgot-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .forgot-input, .forgot-button {
+        font-size: 14px;
+    }
+
+    .forgot-title {
+        font-size: 20px;
+    }
 }
 
 /* Error message styling */

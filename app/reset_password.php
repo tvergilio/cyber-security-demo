@@ -38,6 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </head>
     <body>
     <div class="reset-container">
+
+        <!-- Add the bank logo here -->
+        <img src="assets/hsbc.png" alt="Bank Logo" class="bank-logo">
+
         <h2 class="reset-title">Reset Your Password</h2>
 
         <!-- Display success message if password has been reset -->
